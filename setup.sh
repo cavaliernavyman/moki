@@ -363,10 +363,10 @@ cd $logdir
     if ! grep "Snort processed 181" "$logfile_dnp3_p1"; then
         echo "-> Error: packets missing" >&2
     fi
-    if ! grep "Alerts: * 116" "$logfile_bacnet_dnp3_p1"; then
+    if ! grep "Alerts: * 116" "$logfile_dnp3_p1"; then
         echo "-> Difference: 116 alerts expected" >&2
     fi
-    if ! grep "Logged: * 116" "$logfile_bacnet_dnp3_p1"; then
+    if ! grep "Logged: * 116" "$logfile_dnp3_p1"; then
         echo "-> Difference: 116 logged events expected" >&2
     fi
     if ! grep "Snort processed 33" "$logfile_dnp3_p2"; then
@@ -381,10 +381,10 @@ cd $logdir
     if ! grep "Snort processed 11" "$logfile_enip"; then
         echo "-> Error: packets missing" >&2
     fi
-    if ! grep "Alerts: * 0" "$logfile_bacnet_enip"; then
+    if ! grep "Alerts: * 0" "$logfile_enip"; then
         echo "-> Difference: 0 alerts expected" >&2
     fi
-    if ! grep "Logged: * 0" "$logfile_bacnet_enip"; then
+    if ! grep "Logged: * 0" "$logfile_enip"; then
         echo "-> Difference: 0 logged events expected" >&2
     fi
     if ! grep "Snort processed 10" "$logfile_fox"; then
