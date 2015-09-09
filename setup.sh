@@ -351,98 +351,98 @@ if $snort_test ; then
 cd $logdir
 
     echo "# Checking alerts"
-    if ! grep "Snort processed" "$logfile_bacnet"; then
+    if ! grep "Snort processed 26" "$logfile_bacnet"; then
         echo "-> Error: packets missing" >&2
     fi
-    if ! grep "Alerts:" "$logfile_bacnet"; then
-        echo "-> Error: alerts missing" >&2
+    if ! grep "Alerts: * 13" "$logfile_bacnet"; then
+        echo "-> Difference: 13 alerts expected" >&2
     fi
-    if ! grep "Logged:" "$logfile_bacnet"; then
-        echo "-> Error: logged events missing" >&2
+    if ! grep "Logged: * 13" "$logfile_bacnet"; then
+        echo "-> Difference: 13 logged events expected" >&2
     fi
-    if ! grep "Snort processed" "$logfile_dnp3_p1"; then
+    if ! grep "Snort processed 181" "$logfile_dnp3_p1"; then
         echo "-> Error: packets missing" >&2
     fi
-    if ! grep "Alerts:" "$logfile_bacnet_dnp3_p1"; then
-        echo "-> Error: alerts missing" >&2
+    if ! grep "Alerts: * 116" "$logfile_bacnet_dnp3_p1"; then
+        echo "-> Difference: 116 alerts expected" >&2
     fi
-    if ! grep "Logged:" "$logfile_bacnet_dnp3_p1"; then
-        echo "-> Error: logged events missing" >&2
+    if ! grep "Logged: * 116" "$logfile_bacnet_dnp3_p1"; then
+        echo "-> Difference: 116 logged events expected" >&2
     fi
-    if ! grep "Snort processed" "$logfile_dnp3_p2"; then
+    if ! grep "Snort processed 33" "$logfile_dnp3_p2"; then
         echo "-> Error: packets missing" >&2
     fi
-    if ! grep "Alerts:" "$logfile_dnp3_p2"; then
-        echo "-> Error: alerts missing" >&2
+    if ! grep "Alerts: * 0" "$logfile_dnp3_p2"; then
+        echo "-> Difference: 0 alerts expected" >&2
     fi
-    if ! grep "Logged:" "$logfile_dnp3_p2"; then
-        echo "-> Error: logged events missing" >&2
+    if ! grep "Logged: * 0" "$logfile_dnp3_p2"; then
+        echo "-> Difference: 0 logged events expected" >&2
     fi
-    if ! grep "Snort processed" "$logfile_enip"; then
+    if ! grep "Snort processed 11" "$logfile_enip"; then
         echo "-> Error: packets missing" >&2
     fi
-    if ! grep "Alerts:" "$logfile_bacnet_enip"; then
-        echo "-> Error: alerts missing" >&2
+    if ! grep "Alerts: * 0" "$logfile_bacnet_enip"; then
+        echo "-> Difference: 0 alerts expected" >&2
     fi
-    if ! grep "Logged:" "$logfile_bacnet_enip"; then
-        echo "-> Error: logged events missing" >&2
+    if ! grep "Logged: * 0" "$logfile_bacnet_enip"; then
+        echo "-> Difference: 0 logged events expected" >&2
     fi
-    if ! grep "Snort processed" "$logfile_fox"; then
+    if ! grep "Snort processed 10" "$logfile_fox"; then
         echo "-> Error: packets missing" >&2
     fi
-    if ! grep "Alerts:" "$logfile_fox"; then
-        echo "-> Error: alerts missing" >&2
+    if ! grep "Alerts: * 1" "$logfile_fox"; then
+        echo "-> Difference: 1 alerts expected" >&2
     fi
-    if ! grep "Logged:" "$logfile_fox"; then
-        echo "-> Error: logged events missing" >&2
+    if ! grep "Logged: * 1" "$logfile_fox"; then
+        echo "-> Difference: 1 logged events expected" >&2
     fi
-    if ! grep "Snort processed" "$logfile_modbus_p1"; then
+    if ! grep "Snort processed 118" "$logfile_modbus_p1"; then
         echo "-> Error: packets missing" >&2
     fi
-    if ! grep "Alerts:" "$logfile_modbus_p1"; then
-        echo "-> Error: alerts missing" >&2
+    if ! grep "Alerts: * 20" "$logfile_modbus_p1"; then
+        echo "-> Difference: 20 alerts expected" >&2
     fi
-    if ! grep "Logged:" "$logfile_modbus_p1"; then
-        echo "-> Error: logged events missing" >&2
+    if ! grep "Logged: * 20" "$logfile_modbus_p1"; then
+        echo "-> Difference: 20 logged events expected" >&2
     fi
-    if ! grep "Snort processed" "$logfile_modbus_p2"; then
+    if ! grep "Snort processed 350" "$logfile_modbus_p2"; then
         echo "-> Error: packets missing" >&2
     fi
-    if ! grep "Alerts:" "$logfile_modbus_p2"; then
-        echo "-> Error: alerts missing" >&2
+    if ! grep "Alerts: * 0" "$logfile_modbus_p2"; then
+        echo "-> Difference: 0 alerts expected" >&2
     fi
-    if ! grep "Logged:" "$logfile_modbus_p2"; then
-        echo "-> Error: logged events missing" >&2
+    if ! grep "Logged: * 0" "$logfile_modbus_p2"; then
+        echo "-> Difference: 0 logged events expected" >&2
     fi
-    if ! grep "Snort processed" "$logfile_modicon"; then
+    if ! grep "Snort processed 191" "$logfile_modicon"; then
         echo "-> Error: packets missing" >&2
     fi
-    if ! grep "Alerts:" "$logfile_modicon"; then
-        echo "-> Error: alerts missing" >&2
+    if ! grep "Alerts: * 0" "$logfile_modicon"; then
+        echo "-> Difference: 0 alerts expected" >&2
     fi
-    if ! grep "Logged:" "$logfile_modicon"; then
-        echo "-> Error: logged events missing" >&2
+    if ! grep "Logged: * 0" "$logfile_modicon"; then
+        echo "-> Difference: 0 logged events expected" >&2
     fi
-    if ! grep "Snort processed" "$logfile_omron"; then
+    if ! grep "Snort processed 18" "$logfile_omron"; then
         echo "-> Error: packets missing" >&2
     fi
-    if ! grep "Alerts:" "$logfile_omron"; then
-        echo "-> Error: alerts missing" >&2
+    if ! grep "Alerts: * 2" "$logfile_omron"; then
+        echo "-> Difference: 2 alerts expected" >&2
     fi
-    if ! grep "Logged:" "$logfile_omron"; then
-        echo "-> Error: logged events missing" >&2
+    if ! grep "Logged: * 2" "$logfile_omron"; then
+        echo "-> Difference: 2 logged events expected" >&2
     fi
-    if ! grep "Snort processed" "$logfile_s7"; then
+    if ! grep "Snort processed 39" "$logfile_s7"; then
         echo "-> Error: packets missing" >&2
     fi
-    if ! grep "Alerts:" "$logfile_s7"; then
-        echo "-> Error: alerts missing" >&2
+    if ! grep "Alerts: * 0" "$logfile_s7"; then
+        echo "-> Difference: 0 alerts expected" >&2
     fi
-    if ! grep "Logged:" "$logfile_s7"; then
-        echo "-> Error: logged events missing" >&2
+    if ! grep "Logged: * 0" "$logfile_s7"; then
+        echo "-> Difference: 0 logged events expected" >&2
     fi
     echo "# I think everything worked out ok. See these files for details:"
-    ls -al
+    ls -l
 fi
 
 
